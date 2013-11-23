@@ -22,6 +22,6 @@ Vagrant.configure("2") do |config|
 
   # Provisioning config
   config.vm.provision :chef_client do |chef|
-    chef.add_recipe "recipe[drupal]"
+    chef.add_recipe "drupal"
   end
 end
