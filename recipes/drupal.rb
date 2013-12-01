@@ -11,8 +11,6 @@ include_recipe "application"
 package "git-core"
 
 directory "/usr/local/drupal/shared/files" do
-  user  node[:apache][:user]
-  group node[:apache][:user]
   recursive true
 end
 
@@ -45,3 +43,7 @@ application "drupal" do
   end
 end
 
+directory "/usr/local/drupal/shared/files" do
+  user  node[:apache][:user]
+  group node[:apache][:user]
+end
